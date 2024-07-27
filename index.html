@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Aleatório</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+            margin: 0;
+        }
+        #random-number {
+            font-size: 4em;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="random-number">Carregando...</div>
+    <script>
+        function generateRandomNumber() {
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('random-number').innerText = randomNumber;
+        }
+        window.onload = generateRandomNumber;
+    </script>
+</body>
+</html>
